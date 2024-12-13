@@ -9,7 +9,6 @@ import NavLink from "./NavLink";
 const Header = () => {
   return (
     <>
-      <HeaderBg />
       <header className={styles.header}>
         <Link href="/" className={styles.logo}>
           <Image src={logoImg} alt="Logo Image" priority />

@@ -25,7 +25,7 @@ body {
   -webkit-text-fill-color: transparent;
   background-size: cover;
   background-position: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family:var(--font-montserrat);
 }
 
 .not-found p {

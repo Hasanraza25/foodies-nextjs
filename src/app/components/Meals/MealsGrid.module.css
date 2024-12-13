@@ -1,10 +1,26 @@
 .meals {
-    width: 90%;
-    max-width: 90rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-    grid-gap: 5rem;
-    margin: 2rem auto;
-    list-style: none;
-    padding: 0;
+  width: 90%;
+  max-width: 90rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-gap: 5rem;
+  margin: 2rem auto;
+  list-style: none;
+  padding: 0;
+}
+
+/* For tablets (2 items per row) */
+@media (max-width: 768px) {
+  .meals {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
   }
+}
+
+/* For mobile devices (1 item per row) */
+@media (max-width: 480px) {
+  .meals {
+    grid-template-columns: 1fr;
+    grid-gap: 1.5rem;
+  }
+}
