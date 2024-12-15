@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import styles from "./page.module.css";
 import Link from "next/link";
 import MealsGrid from "../components/Meals/MealsGrid";
-import { getMeals } from "../../../lib/meals";
+import { getMeals } from "../lib/meals";
 
 const MealsPage = async () => {
   async function Meals() {

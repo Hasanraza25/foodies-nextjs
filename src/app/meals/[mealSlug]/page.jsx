@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import styles from "./page.module.css";
-import { getMeal } from "../../../../lib/meals";
+import { getMeal } from "../../lib/meals";
 import { notFound } from "next/navigation";
 
 const MealDetailsPage = ({params}) => {
