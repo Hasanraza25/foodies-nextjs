@@ -4,18 +4,22 @@ import styles from "./page.module.css";
 import { getMeal } from "../../lib/meals";
 import { notFound } from "next/navigation";
 
-const MealDetailsPage = ({params}) => {
+const MealDetailsPage = ({ params }) => {
   const meal = getMeal(params.mealSlug);
 
-  if(!meal){
-    notFound(); 
+  if (!meal) {
+    notFound();
   }
-  meal.instructions = meal.instructions.replace(/\n/g, '<br />')
+  meal.instructions = meal.instructions.replace(/\n/g, "<br />");
   return (
     <>
       <header className={styles.header}>
         <div className={styles.image}>
-          <Image src={meal.image}  alt={meal.title} fill />
+          <Image
+            src={meal.image.startsWith("/") ? meal.image : `/${meal.image}`}
+            alt={meal.title}
+            fill
+          />
         </div>
         <div className={styles.headerText}>
           <h1>{meal.title}</h1>
