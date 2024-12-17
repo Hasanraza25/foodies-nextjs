@@ -1,9 +1,9 @@
-"use client";
-import ImagePicker from "@/app/components/Meals/ImagePicker";
-import classes from "./page.module.css";
-import { shareMeal } from "@/app/lib/action";
+import ImagePicker from '@/app/components/Meals/ImagePicker';
+import classes from './page.module.css';
+import { shareMeal } from '@/app/lib/action';
 
 export default function ShareMealPage() {
+  
   return (
     <>
       <header className={classes.header}>
@@ -42,7 +42,9 @@ export default function ShareMealPage() {
             ></textarea>
           </p>
           <ImagePicker label="Your Image" name="image" />
-          <p className={classes.actions}>Share Meal</p>
+          <p className={classes.actions}>
+            <button type="submit">Share Meal</button>
+          </p>
         </form>
       </main>
     </>
