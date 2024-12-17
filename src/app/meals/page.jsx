@@ -4,6 +4,11 @@ import Link from "next/link";
 import MealsGrid from "../components/Meals/MealsGrid";
 import { getMeals } from "../lib/meals";
 
+export const metadata = {
+  title: "All Meals",
+  description: "Browse Delicious Meals.",
+};
+
 const MealsPage = async () => {
   async function Meals() {
     const meals = await getMeals();
